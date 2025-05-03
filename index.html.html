@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Verdant Hosting Plans</title>
+  <link href="https://fonts.googleapis.com/css2?family=Segoe+UI&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: url('bg2.png') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+      padding-top: 80px; /* space for navbar */
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+    }
+
+    /* NAVIGATION BAR */
+    .navbar {
+      width: 100%;
+      background-color: rgba(18, 19, 26, 0.6);
+      backdrop-filter: blur(10px);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 40px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 999;
+    }
+
+    .navbar .logo-wrapper {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .logo-wrapper img {
+      height: 40px;
+      margin-top: -5px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-left: auto;
+    }
+
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      padding: 10px 15px;
+      font-weight: bold;
+    }
+
+    .navbar a:hover {
+      color: #3fcf8e;
+    }
+
+    .dropdown {
+      position: relative;
+    }
+
+    .dropdown-content {
+      opacity: 0;
+      transform: translateY(-10px);
+      pointer-events: none;
+      transition: opacity 0.3s ease, transform 0.3s ease;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      background-color: #1c1d25;
+      min-width: 200px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+      border-radius: 8px;
+      z-index: 1000;
+    }
+
+    .dropdown:hover .dropdown-content {
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: auto;
+    }
+
+    .dropdown-content a {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 20px;
+      color: white;
+      text-decoration: none;
+      font-size: 14px;
+      transition: background-color 0.3s ease;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #2a2b35;
+    }
+
+    /* CARDS */
+    .card {
+      background: rgba(20, 20, 20, 0.7);
+      border: 2px solid #00ff95;
+      border-radius: 16px;
+      padding: 1.5rem;
+      width: 260px;
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+      position: relative;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 10px rgba(0, 255, 149, 0.2);
+    }
+
+    .card img {
+      width: 50px;
+      height: 50px;
+      margin-bottom: 0.8rem;
+    }
+
+    .card h2 {
+      font-size: 1.2rem;
+      margin: 0.5rem 0;
+    }
+
+    .ram {
+      font-size: 0.9rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .players {
+      font-size: 0.85rem;
+      margin-bottom: 0.6rem;
+      color: #b5ffda;
+    }
+
+    .price {
+      font-size: 0.95rem;
+      margin-bottom: 1rem;
+    }
+
+    .price del {
+      color: #888;
+      margin-right: 0.3rem;
+    }
+
+    .add-to-cart {
+      background: linear-gradient(145deg, #39ff14, #00c853);
+      color: #000;
+      border: 2px solid #00ff95;
+      border-radius: 8px;
+      padding: 0.6rem 1rem;
+      font-family: 'Segoe UI', sans-serif;
+      font-size: 0.85rem;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.2s;
+    }
+
+    .add-to-cart:hover {
+      background: #00ff95;
+      transform: translateY(-2px);
+    }
+
+    .popular-badge {
+      position: absolute;
+      top: -10px;
+      right: -10px;
+      background-color: gold;
+      color: black;
+      font-size: 0.7rem;
+      padding: 0.3rem 0.5rem;
+      border-radius: 6px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <div class="navbar">
+    <div class="logo-wrapper">
+      <a href="LandingPage.html">
+  <img src="image-removebg-preview (5).png" alt="Home Logo">
+</a>
+
+    </div>
+    <div class="nav-links">
+      <a href="#">Control Panel</a>
+      <div class="dropdown">
+        <a href="#">More ▼</a>
+        <div class="dropdown-content">
+          <a href="#"><span>📖</span> Knowledgebase</a>
+          <a href="#"><span>📘</span> Multicraft Knowledgebase</a>
+          <a href="#"><span>📝</span> Blog</a>
+          <a href="#"><span>⚙️</span> Subdomain Creator</a>
+          <a href="#"><span>ℹ️</span> About Us</a>
+          <a href="#"><span>👥</span> Partners</a>
+          <a href="#"><span>🎬</span> Careers</a>
+          <a href="#"><span>❓</span> FAQ</a>
+          <a href="#"><span>✉️</span> Contact Us</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cards Section -->
+  <div class="card">
+    <img src="image-removebg-preview (4).png" alt="Dirt" />
+    <h2>GRASS</h2>
+    <div class="ram">614MB RAM</div>
+    <div class="players">2+ players</div>
+    <div class="price">$5.99 /monthly</div>
+    <button class="add-to-cart">Add To Cart</button>
+  </div>
+
+  <div class="card">
+    <img src="image-removebg-preview (2).png" alt="Wood" />
+    <h2>WOOD</h2>
+    <div class="ram">1GB RAM</div>
+    <div class="players">6+ players</div>
+    <div class="price">$9.99 /monthly</div>
+    <button class="add-to-cart">Add To Cart</button>
+  </div>
+
+  <div class="card">
+    <div class="popular-badge">MOST POPULAR</div>
+    <img src="image-removebg-preview (3).png" alt="Cobblestone" />
+    <h2>COBBLESTONE</h2>
+    <div class="ram">2GB RAM</div>
+    <div class="players">15+ players</div>
+    <div class="price">$14.99 /monthly</div>
+    <button class="add-to-cart">Add To Cart</button>
+  </div>
+
+  <div class="card">
+    <img src="image-removebg-preview (7).png" alt="Iron" />
+    <h2>IRON</h2>
+    <div class="ram">4GB RAM</div>
+    <div class="players">25+ players</div>
+    <div class="price">$27.99 /monthly</div>
+    <button class="add-to-cart">Add To Cart</button>
+  </div>
+
+</body>
+</html>
