@@ -17,7 +17,7 @@
       background: url('bg2.png') no-repeat center center fixed;
       background-size: cover;
       color: white;
-      padding-top: 80px; /* space for navbar */
+      padding-top: 80px;
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
@@ -39,17 +39,13 @@
       z-index: 999;
     }
 
-    .navbar .logo-wrapper {
+    .logo-wrapper {
       position: absolute;
       left: 50%;
       transform: translateX(-50%);
       display: flex;
       align-items: center;
       justify-content: center;
-    }
-
-    .logo-wrapper a {
-      display: inline-block;
     }
 
     .logo-wrapper img {
@@ -64,62 +60,22 @@
       margin-left: auto;
     }
 
-    .navbar a {
+    .navbar a.dashboard-button {
       color: white;
       text-decoration: none;
-      padding: 10px 15px;
       font-weight: bold;
+      padding: 10px 20px;
+      border: 2px solid transparent;
+      border-image: linear-gradient(to right, #00ff95, #3fcf8e);
+      border-image-slice: 1;
+      border-radius: 10px;
+      background-color: rgba(255, 255, 255, 0.05);
+      transition: all 0.3s ease;
     }
 
-    .navbar a:hover {
-      color: #3fcf8e;
-    }
-
-    .dropdown {
-      position: relative;
-    }
-
-    .dropdown-content {
-      opacity: 0;
-      transform: translateY(-10px);
-      pointer-events: none;
-      transition: opacity 0.3s ease, transform 0.3s ease;
-      position: absolute;
-      top: 100%;
-      right: 0;
-      background-color: #1c1d25;
-      min-width: 200px;
-      box-shadow: 0 8px 16px rgba(0,0,0,0.3);
-      border-radius: 8px;
-      z-index: 1000;
-    }
-
-    .dropdown:hover .dropdown-content {
-      opacity: 1;
-      transform: translateY(0);
-      pointer-events: auto;
-    }
-
-    .dropdown-content a {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      padding: 12px 20px;
-      color: white;
-      text-decoration: none;
-      font-size: 14px;
-      transition: background-color 0.3s ease;
-    }
-
-    .dropdown-content a:hover {
-      background-color: #2a2b35;
-    }
-
-    /* ANIMATION */
-    @keyframes float {
-      0% { transform: translateY(0); }
-      50% { transform: translateY(-6px); }
-      100% { transform: translateY(0); }
+    .navbar a.dashboard-button:hover {
+      background-color: rgba(63, 207, 142, 0.2);
+      box-shadow: 0 0 10px rgba(0, 255, 149, 0.3);
     }
 
     /* CARDS */
@@ -150,20 +106,13 @@
       margin: 0.5rem 0;
     }
 
-    .ram {
+    .ram, .players, .price {
       font-size: 0.9rem;
-      margin-bottom: 0.4rem;
+      margin-bottom: 0.5rem;
     }
 
     .players {
-      font-size: 0.85rem;
-      margin-bottom: 0.6rem;
       color: #b5ffda;
-    }
-
-    .price {
-      font-size: 0.95rem;
-      margin-bottom: 1rem;
     }
 
     .add-to-cart {
@@ -197,6 +146,12 @@
       border-radius: 6px;
       font-weight: bold;
     }
+
+    @keyframes float {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-6px); }
+      100% { transform: translateY(0); }
+    }
   </style>
 </head>
 <body>
@@ -209,21 +164,7 @@
       </a>
     </div>
     <div class="nav-links">
-      <a href="https://panel.verdant-hosting.com">Control Panel</a>
-      <div class="dropdown">
-        <a href="#">More ▼</a>
-        <div class="dropdown-content">
-          <a href="#"><span>📖</span> Knowledgebase</a>
-          <a href="#"><span>📘</span> Multicraft Knowledgebase</a>
-          <a href="#"><span>📝</span> Blog</a>
-          <a href="#"><span>⚙️</span> Subdomain Creator</a>
-          <a href="#"><span>ℹ️</span> About Us</a>
-          <a href="#"><span>👥</span> Partners</a>
-          <a href="#"><span>🎬</span> Careers</a>
-          <a href="#"><span>❓</span> FAQ</a>
-          <a href="#"><span>✉️</span> Contact Us</a>
-        </div>
-      </div>
+      <a class="dashboard-button" href="https://panel.verdant-hosting.com">Dashboard</a>
     </div>
   </div>
 
