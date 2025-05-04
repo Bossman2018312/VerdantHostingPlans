@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Verdant Hosting Plans</title>
+  <title>Wealthy Tilets - Hosting Plans</title>
   <link href="https://fonts.googleapis.com/css2?family=Segoe+UI&display=swap" rel="stylesheet">
   <style>
     * {
@@ -196,6 +196,27 @@
       border-radius: 6px;
       font-weight: bold;
     }
+
+    .view-all-plans {
+      width: 100%;
+      text-align: center;
+      margin-top: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .view-all-plans a {
+      color: #00ff95;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 0.5rem 1rem;
+      border: 1px solid #00ff95;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+    }
+
+    .view-all-plans a:hover {
+      background-color: rgba(0, 255, 149, 0.2);
+    }
   </style>
 </head>
 <body>
@@ -203,12 +224,12 @@
   <!-- Navigation Bar -->
   <div class="navbar">
     <div class="logo-wrapper">
-      <a href="https://verdant-hosting.com" target="_blank">
-        <img src="image-removebg-preview (5).png" alt="Home Logo">
+      <a href="#" target="_self">
+        <span style="font-size: 1.5rem; font-weight: bold;">WEALTHY TILETINS</span>
       </a>
     </div>
     <div class="nav-links">
-      <a href="#">Control Panel</a>
+      <a href="https://panel.verdant-hosting.com" target="_self">Control Panel</a>
       <div class="dropdown">
         <a href="#">More ▼</a>
         <div class="dropdown-content">
@@ -228,41 +249,42 @@
 
   <!-- Cards Section -->
   <div class="card">
-    <img src="image-removebg-preview (4).png" alt="Dirt" />
     <h2>GRASS</h2>
-    <div class="ram">614MB RAM</div>
-    <div class="players">2+ players</div>
-    <div class="price">$3.99 /monthly</div>
+    <div class="ram">5,048B RAM</div>
+    <div class="players">2.5 Players</div>
+    <div class="price">$5.99 /monthly</div>
     <button class="add-to-cart">Add To Cart</button>
   </div>
 
   <div class="card">
-    <img src="image-removebg-preview (2).png" alt="Wood" />
     <h2>WOOD</h2>
-    <div class="ram">1GB RAM</div>
-    <div class="players">6+ players</div>
+    <div class="ram">10B RAM</div>
+    <div class="players">6.5 Players</div>
     <div class="price">$6.99 /monthly</div>
     <button class="add-to-cart">Add To Cart</button>
   </div>
 
   <div class="card">
     <div class="popular-badge">MOST POPULAR</div>
-    <img src="image-removebg-preview (3).png" alt="Cobblestone" />
-    <h2>COBBLESTONE</h2>
-    <div class="ram">2GB RAM</div>
-    <div class="players">15+ players</div>
+    <h2>CABBLESTONES</h2>
+    <div class="ram">20B RAM</div>
+    <div class="players">15.5 Players</div>
     <div class="price">$13.99 /monthly</div>
     <button class="add-to-cart">Add To Cart</button>
   </div>
 
-  <div class="card">
-    <img src="image-removebg-preview (7).png" alt="Iron" />
-    <h2>IRON</h2>
-    <div class="ram">4GB RAM</div>
-    <div class="players">25+ players</div>
-    <div class="price">$27.99 /monthly</div>
-    <button class="add-to-cart">Add To Cart</button>
+  <div class="view-all-plans">
+    <a href="#">View All Plans</a>
   </div>
 
+  <script>
+    // Make all links with target="_self" overwrite the current tab
+    document.querySelectorAll('a[target="_self"]').forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        window.location.href = this.href;
+      });
+    });
+  </script>
 </body>
 </html>
