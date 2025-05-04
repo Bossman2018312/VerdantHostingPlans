@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Verdant Hosting Plans</title>
-  <link rel="icon" type="image/png" href="vforverdantsmaller.png">
+  <link rel="icon" type="image/png" href="vforverdantsmaller.ico">
   <style>
     * {
       box-sizing: border-box;
@@ -60,22 +60,19 @@
       margin-left: auto;
     }
 
-    .navbar a.dashboard-button {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
+    .nav-links a.btn-dashboard {
+      background-color: #3fcf8e;
+      border-radius: 8px;
       padding: 10px 20px;
-      border: 2px solid transparent;
-      border-image: linear-gradient(to right, #00ff95, #3fcf8e);
-      border-image-slice: 1;
-      border-radius: 10px;
-      background-color: rgba(255, 255, 255, 0.05);
-      transition: all 0.3s ease;
+      color: white;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background-color 0.3s ease, transform 0.2s ease;
     }
 
-    .navbar a.dashboard-button:hover {
-      background-color: rgba(63, 207, 142, 0.2);
-      box-shadow: 0 0 10px rgba(0, 255, 149, 0.3);
+    .nav-links a.btn-dashboard:hover {
+      background-color: #35b87d;
+      transform: scale(1.05);
     }
 
     /* CARDS */
@@ -164,7 +161,7 @@
       </a>
     </div>
     <div class="nav-links">
-      <a class="dashboard-button" href="https://panel.verdant-hosting.com">Dashboard</a>
+      <a href="https://panel.verdant-hosting.com" class="btn-dashboard">Dashboard</a>
     </div>
   </div>
 
